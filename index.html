@@ -1,0 +1,112 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_media.css">
+    <script src="script.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="icon" href="./img/square-outline-16.ico">
+    <title>Tic-Tac-Toe</title>
+
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header__container ">
+        <nav class="navbar">
+            <div onclick="window.location.reload()" class="header__logo">
+                <img src="./img/square-outline-16.ico">
+                <h2>Tic-Tac-Toe</h2>
+            </div>
+            <div class="header__players">
+                <button id="player-1" class=" btn-light player__active">
+                    <h3>Spieler 1 </h3>
+                    <img class="player__sign" src="./img/sign_o.png">
+                </button>
+                <button id="player-2" class="btn-light">
+                    <h3>Spieler 2</h3>
+                    <img class="player__sign" src="./img/sign_x.png">
+                </button>
+            </div>
+            <div class="header__restart">
+                <button onclick="restartGame()" id="computer" class="btn btn-info">
+                    <h3>Neu Spielen</h3>
+                </button>
+            </div>
+        </nav>
+    </header>
+    <!-- Game area -->
+    <main class="main">
+        <!-- Winner Animation-->
+        <div id="winner_container" class="winner_container d-none">
+            <img class="winner_background" src="./img/winner.jpg">
+            <img id="winner_sign" class="winner_sign" src="./img/sign_o.png">
+            <div class="winner_text"> ... ist unsere Gewinner!</div>
+        </div>
+        <div class="main__container">
+            <table>
+                <!-- Animation Line -->
+                <div id="line-1" class="horizontal-line" style="top: 60px;"></div>
+                <div id="line-2" class="horizontal-line" style="top: 180px;"></div>
+                <div id="line-3" class="horizontal-line" style="top: 300px;"></div>
+                <div id="line-4" class="horizontal-line make-vertical" style="top: 180px; left:100px "></div>
+                <div id="line-5" class="horizontal-line make-vertical" style="top: 180px;"></div>
+                <div id="line-6" class="horizontal-line make-vertical" style="top: 180px; left:-140px;"></div>
+                <div id="line-7" class="horizontal-line make-vertical"
+                    style="top: 180px; transform: rotate(45deg) scaleX(0.0);"></div>
+                <div id="line-8" class="horizontal-line make-vertical"
+                    style="top: 180px; transform: rotate(-45deg) scaleX(0.0);"></div>
+
+                <!--Table Board-->
+                <tr class="main__row">
+                    <td onclick="fillShape(0)" class="main__cell">
+                        <img id="circle-0" class="main__sign d-none" src="./img/sign_o.png">
+                        <img id="cross-0" class="main__sign d-none" src="./img/sign_x.png">
+                    </td>
+                    <td onclick="fillShape(1)" class="main__cell">
+                        <img id="circle-1" class="main__sign d-none" src="./img/sign_o.png">
+                        <img id="cross-1" class="main__sign d-none" src="./img/sign_x.png">
+                    </td>
+                    <td onclick="fillShape(2)" class="main__cell">
+                        <img id="circle-2" class="main__sign d-none" src="./img/sign_o.png">
+                        <img id="cross-2" class="main__sign d-none" src="./img/sign_x.png">
+                    </td>
+                </tr>
+                <tr class="main__row">
+                    <td onclick="fillShape(3)" class="main__cell">
+                        <img id="circle-3" class="main__sign d-none" src="./img/sign_o.png">
+                        <img id="cross-3" class="main__sign d-none" src="./img/sign_x.png">
+                    </td>
+                    <td onclick="fillShape(4)" class="main__cell">
+                        <img id="circle-4" class="main__sign d-none" src="./img/sign_o.png">
+                        <img id="cross-4" class="main__sign d-none" src="./img/sign_x.png">
+                    </td>
+                    <td onclick="fillShape(5)" class="main__cell">
+                        <img id="circle-5" class="main__sign d-none" src="./img/sign_o.png">
+                        <img id="cross-5" class="main__sign d-none" src="./img/sign_x.png">
+                    </td>
+                </tr>
+                <tr class="main__row">
+                    <td onclick="fillShape(6)" class="main__cell">
+                        <img id="circle-6" class="main__sign d-none" src="./img/sign_o.png">
+                        <img id="cross-6" class="main__sign d-none" src="./img/sign_x.png">
+                    </td>
+                    <td onclick="fillShape(7)" class="main__cell">
+                        <img id="circle-7" class="main__sign d-none" src="./img/sign_o.png">
+                        <img id="cross-7" class="main__sign d-none" src="./img/sign_x.png">
+                    </td>
+                    <td onclick="fillShape(8)" class="main__cell">
+                        <img id="circle-8" class="main__sign d-none" src="./img/sign_o.png">
+                        <img id="cross-8" class="main__sign d-none" src="./img/sign_x.png">
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </main>
+</body>
+
+</html>

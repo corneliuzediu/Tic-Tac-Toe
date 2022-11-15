@@ -1,0 +1,172 @@
+@media(max-width:600px) {
+    body {
+        flex-direction: column;
+        height: 100%;
+    }
+
+
+    .header__container {
+        width: auto;
+        height: auto;
+        border-right: none;
+    }
+
+
+    .navbar {
+        justify-content: center !important;
+    }
+
+
+    .header__logo {
+        width: 200px;
+    }
+
+
+    .header__players {
+        flex-direction: row !important;
+    }
+
+
+    .player__sign {
+        width: 30px;
+        height: 40px;
+    }
+
+
+    .btn-light {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 5px;
+        margin-inline: 10px;
+        gap: 20px;
+    }
+}
+
+
+@media(max-width:400px) {
+    .header__container {
+        padding-inline: 0px;
+    }
+
+
+    .header__container h3 {
+        font-size: 1rem;
+    }
+
+
+    .header__logo {
+        margin: 0;
+        padding-top: 0;
+    }
+
+
+    .header__players {
+        gap: 5px;
+    }
+
+
+    .btn-light {
+        margin-inline: 0px;
+    }
+
+
+    .main__container {
+        width: auto;
+        height: 280px;
+    }
+
+
+    .main__cell {
+        position: relative;
+        width: 90px;
+        height: 90px;
+    }
+
+
+    .main__sign {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: 70px;
+        height: 70px;
+    }
+
+
+    .horizontal-line {
+        width: 280px;
+        left: 0px;
+    }
+
+
+    .winner_container {
+        width: 280px;
+    }
+
+
+    .winner_background {
+        object-position: -50px 20px;
+    }
+
+
+    .winner_sign {
+        width: 40px;
+        height: 40px;
+        top: 20%;
+        left: 16%;
+    }
+    
+
+    .winner_text {
+        top: 24%;
+        left: 32%;
+    }
+
+
+    #line-1 {
+        top: 45px !important;
+        left: -5px !important;
+    }
+
+
+    #line-2 {
+        top: 133px !important;
+        left: -5px !important;
+    }
+
+
+    #line-3 {
+        top: 225px !important;
+        left: -5px !important;
+    }
+
+
+    #line-4 {
+        top: 130px !important;
+        left: 85px !important;
+    }
+
+
+    #line-5 {
+        top: 130px !important;
+        left: -5px !important;
+    }
+
+
+    #line-6 {
+        top: 130px !important;
+        left: -95px !important;
+    }
+
+
+    #line-7 {
+        top: 130px !important;
+        left: -5px !important;
+    }
+
+    
+    #line-8 {
+        top: 130px !important;
+        left: -5px !important;
+    }
+}

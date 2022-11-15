@@ -1,0 +1,248 @@
+/* General Classes */
+body {
+    display: flex;
+    margin: 0;
+    background-color: rgb(244, 244, 240);
+}
+
+
+.d-none {
+    display: none;
+}
+
+
+/* Header / Player Classes*/
+.header__logo {
+    display: flex;
+    justify-content: center !important;
+    align-items: center;
+    width: 100%;
+    gap:10px;
+    padding-top: 10px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid rgba(1, 1, 1, 0);
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+
+.header__logo:hover {
+    color: #555;
+    border-bottom: 2px solid #555;
+}
+
+
+.header__logo img{
+    width: 32px;
+    height: 32px;
+    padding-bottom: 2px;
+}
+
+
+.header__logo h2{
+    margin: 0px;
+}
+
+
+.header__container {
+    display: flex;
+    align-items: flex-start !important;
+    width: 35%;
+    padding-inline: 20px;
+    background-color: rgb(255, 255, 255);
+    border-right: 2px solid #888;
+    box-shadow: 1px 0px 5px #888;
+}
+
+
+.navbar {
+    width: 100% !important;
+}
+
+
+.btn {
+    margin-top: 20px;
+}
+
+
+.btn-light {
+    width: 100% !important;
+    white-space: nowrap;
+    border: unset;
+    border-radius: 5px;
+    cursor: unset !important;
+}
+
+
+.header__players {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+
+.header__restart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+
+.player__sign {
+    width: 60px;
+    height: 70px;
+    padding-bottom: 10px;
+}
+
+
+.player__active {
+    background-color: #0ce71ec5 !important;
+}
+
+
+/* Main Board / Table  Classes*/
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+
+.main__container {
+    position: relative;
+    width: 360px;
+    height: 360px;
+}
+
+
+table {
+    border-collapse: collapse;
+}
+
+
+table td {
+    border: 5px solid black;
+}
+
+
+table tr:first-child td {
+    border-top: 0;
+}
+
+
+table tr td:first-child {
+    border-left: 0;
+}
+
+
+table tr:last-child td {
+    border-bottom: 0;
+}
+
+
+table tr td:last-child {
+    border-right: 0;
+}
+
+
+.main__cell {
+    position: relative;
+    width: 120px;
+    height: 120px;
+}
+
+
+.main__cell:hover {
+    cursor: pointer;
+    background-color: rgba(221, 151, 0, 0.1);
+    transition: all 225ms ease-in-out;
+}
+
+
+.main__sign {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 100px;
+    height: 100px;
+}
+
+
+.horizontal-line {
+    position: absolute;
+    z-index: 1;
+    left: -20px;
+    height: 10px;
+    width: 400px;
+    background-color: #0ce71ea9;
+    transform: scaleX(0.0);
+    transition: transform 400ms ease-in-out;
+}
+
+
+.make-vertical {
+    transform: rotate(90deg) scaleX(0.0);
+}
+
+
+/* Classes for Winning Animation*/
+.winner_container {
+    position: absolute;
+    width: 400px;
+    height: 500px;
+    z-index: 2;
+    animation: zoomIn 225ms ease-in-out;
+}
+
+
+.winner_background {
+    position: relative;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+
+.winner_sign {
+    position: absolute;
+    z-index: 4;
+    width: 60px;
+    height: 60px;
+    top: 8%;
+    left: 28%;
+}
+
+
+.winner_sign img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+
+.winner_text {
+    position: absolute;
+    z-index: 4;
+    width: 250px;
+    height: 60px;
+    top: 16%;
+    left: 45%;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
